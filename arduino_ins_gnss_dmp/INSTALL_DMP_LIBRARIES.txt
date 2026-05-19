@@ -1,0 +1,44 @@
+═══════════════════════════════════════════════════════════════════
+  Установка библиотек для arduino_ins_gnss_dmp (DMP MPU6050)
+═══════════════════════════════════════════════════════════════════
+
+Ошибка "I2Cdev.h: No such file or directory" значит, что библиотеки
+I2Cdev и MPU6050 из репозитория jrowberg/i2cdevlib не установлены.
+
+ШАГ 1 — Скачать репозиторий
+──────────────────────────
+  • Откройте: https://github.com/jrowberg/i2cdevlib
+  • Нажмите зелёную кнопку "Code" → "Download ZIP"
+  • Сохраните архив (например, i2cdevlib-main.zip) и распакуйте его
+
+ШАГ 2 — Папка библиотек Arduino
+──────────────────────────
+  На Windows папка обычно:
+    C:\Users\<ваш_логин>\Documents\Arduino\libraries
+
+  В Arduino IDE: Файл → Настройки → "Расположение скетчей" —
+  папка "libraries" находится рядом с этой папкой (внутри неё).
+
+ШАГ 3 — Скопировать две папки
+──────────────────────────
+  В распакованном архиве найдите:
+    i2cdevlib-main\Arduino\I2Cdev
+    i2cdevlib-main\Arduino\MPU6050
+
+  Скопируйте их в папку libraries так, чтобы получилось:
+
+    ...\Arduino\libraries\I2Cdev\     ← внутри должны быть I2Cdev.h, I2Cdev.cpp
+    ...\Arduino\libraries\MPU6050\     ← внутри MPU6050.h, MPU6050_6Axis_MotionApps20.h и др.
+
+  Важно: копировать именно папки I2Cdev и MPU6050, а не всю папку Arduino.
+  Имена папок должны быть точно I2Cdev и MPU6050.
+
+ШАГ 4 — Перезапуск Arduino IDE
+──────────────────────────
+  Закройте Arduino IDE и откройте снова. Откройте скетч из папки
+  arduino_ins_gnss_dmp (Файл → Открыть → arduino_ins_gnss_dmp.ino)
+  и нажмите "Проверить".
+
+Если ошибка остаётся — проверьте, что по путям существуют файлы:
+  ...\libraries\I2Cdev\I2Cdev.h
+  ...\libraries\MPU6050\MPU6050_6Axis_MotionApps20.h

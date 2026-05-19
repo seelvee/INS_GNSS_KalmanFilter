@@ -1,0 +1,67 @@
+import csv
+from pathlib import Path
+
+import numpy as np
+
+
+def _to_float(value: str) -> float:
+    """Convert CSV token to float, keeping invalid values as np.nan."""
+    token = value.strip().lower()
+    if token in {"", "nan", "none"}:
+        return np.nan
+    try:
+        return float(token)
+    except ValueError:
+        return np.nan
+
+
+def parse_csv(csv_path: str | Path) -> list[dict[str, float]]:
+    """
+    Read telemetry CSV and return rows as dictionaries.
+
+    File format:
+    - comment lines start with '#'
+    - one header line
+    - numeric values (including 'nan')
+    """
+    rows: list[dict[str, float]] = []
+
+    with Path(csv_path).open("r", encoding="utf-8", newline="") as file:
+        reader = csv.reader(file)
+
+        header: list[str] | None = None
+        for raw_row in reader:
+            if not raw_row:
+                continue
+            if raw_row[0].strip().startswith("#"):
+                continue
+
+            if header is None:
+                header = [col.strip() for col in raw_row]
+                continue
+
+            row = {header[i]: _to_float(raw_row[i]) for i in range(min(len(header), len(raw_row)))}
+            rows.append(row)
+
+    return rows
+
+
+lat0 = None
+lon0 = None
+
+line = ser.readline()
+dt = 0.1
+F = np.array([
+            [1, 0],
+            [0, 1]
+        ])
+
+X = np.array()
+
+F = np.array()  
+X_k_1 = 0
+
+X = F*X_k_1 + B * u 
+z = H * X_k_1 + V
+X_k_1 = X
+

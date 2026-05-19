@@ -1,0 +1,122 @@
+{
+  "sensor": "MPU6050",
+  "accel_range": "+-2g",
+  "gyro_range": "+-250dps",
+  "accel_lsb_per_g": 16384,
+  "gyro_lsb_per_dps": 131,
+  "g": 9.80665,
+  "calibration_mode": "six_position",
+  "accel_bias_raw": [
+    526.88816449348,
+    -450.71414242728133,
+    -1215.3445336008026
+  ],
+  "accel_scale": [
+    -0.0005931366987159412,
+    -0.0005951394889651305,
+    0.0005871836241301267
+  ],
+  "accel_bias_mps2": [
+    -0.3125167064801645,
+    0.26823778439352924,
+    -0.7136304078064578
+  ],
+  "accel_model_note": "Основная модель: a_mps2[i] = (raw[i] - accel_bias_raw[i]) * accel_scale[i]. Поле accel_bias_mps2 = bias_raw*scale — для формы a = raw*scale - accel_bias_mps2.",
+  "gyro_bias_raw": null,
+  "gyro_bias_rad_s": null,
+  "accel_noise_std_mps2": null,
+  "gyro_noise_std_rad_s": null,
+  "accel_noise_cov_mps2": null,
+  "gyro_noise_cov_rad_s": null,
+  "sample_rate_hz_estimated": 100.0,
+  "calibration_duration_s": 120.0,
+  "created_at": "2026-05-03T19:18:36+00:00",
+  "six_pose_mean_raw": [
+    {
+      "pose": "+X вверх",
+      "mean_ax_raw": -16006.65295887663,
+      "mean_ay_raw": -329.88565697091275,
+      "mean_az_raw": -1685.8665997993983
+    },
+    {
+      "pose": "-X вверх",
+      "mean_ax_raw": 17060.42928786359,
+      "mean_ay_raw": -304.5506519558676,
+      "mean_az_raw": -682.494483450351
+    },
+    {
+      "pose": "+Y вверх",
+      "mean_ax_raw": 20.707121364092277,
+      "mean_ay_raw": -16928.615847542627,
+      "mean_az_raw": -1279.2457372116348
+    },
+    {
+      "pose": "-Y вверх",
+      "mean_ax_raw": 327.60180541624874,
+      "mean_ay_raw": 16027.187562688065,
+      "mean_az_raw": -197.30290872617854
+    },
+    {
+      "pose": "+Z вверх",
+      "mean_ax_raw": -42.753259779338016,
+      "mean_ay_raw": -102.10531594784354,
+      "mean_az_raw": 15485.819458375125
+    },
+    {
+      "pose": "-Z вверх",
+      "mean_ax_raw": 980.1634904714142,
+      "mean_ay_raw": -9.296890672016048,
+      "mean_az_raw": -17916.50852557673
+    }
+  ],
+  "six_pose_magnitude_check": [
+    {
+      "pose": "+X",
+      "calib_ax_mps2": 9.80665,
+      "calib_ay_mps2": -0.0719098030869339,
+      "calib_az_mps2": -0.2762828520636868,
+      "mag_mps2": 9.810804628399469,
+      "err_vs_g_mps2": 0.004154628399469118
+    },
+    {
+      "pose": "-X",
+      "calib_ax_mps2": -9.80665,
+      "calib_ay_mps2": -0.0869876650245169,
+      "calib_az_mps2": 0.3128808235652619,
+      "mag_mps2": 9.812025554701806,
+      "err_vs_g_mps2": 0.0053755547018070615
+    },
+    {
+      "pose": "+Y",
+      "calib_ax_mps2": 0.30023455287435646,
+      "calib_ay_mps2": 9.80665,
+      "calib_az_mps2": -0.037521740322485606,
+      "mag_mps2": 9.81131657272542,
+      "err_vs_g_mps2": 0.0046665727254211475
+    },
+    {
+      "pose": "-Y",
+      "calib_ax_mps2": 0.11820405312218857,
+      "calib_ay_mps2": -9.80665,
+      "calib_az_mps2": 0.5977773708092047,
+      "mag_mps2": 9.8255633022095,
+      "err_vs_g_mps2": 0.01891330220950138
+    },
+    {
+      "pose": "+Z",
+      "calib_ax_mps2": 0.33787523384502605,
+      "calib_ay_mps2": -0.20747087883970644,
+      "calib_az_mps2": 9.80665,
+      "mag_mps2": 9.814661892378787,
+      "err_vs_g_mps2": 0.008011892378787522
+    },
+    {
+      "pose": "-Z",
+      "calib_ax_mps2": -0.268854230459944,
+      "calib_ay_mps2": -0.26270483763002095,
+      "calib_az_mps2": -9.80665,
+      "mag_mps2": 9.813851468788918,
+      "err_vs_g_mps2": 0.00720146878891903
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# COM-порт и визуализация (не пакет "serial", а "pyserial")
+pyserial>=3.5
+matplotlib>=3.5
+numpy>=1.20
