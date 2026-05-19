@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 
 
-path = "arduino_ins_gnss\\multi_1778262478.318379.csv"
+path = "data\\multi_1778262478.318379.csv"
 
 omega_shu =  0.0012407 # rad/s частота шуллера
 height = 167 # высота в метрах
